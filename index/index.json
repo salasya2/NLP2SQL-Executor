@@ -1,0 +1,2028 @@
+{
+    "frpm": {
+        "row_count": 9986,
+        "columns": [
+            [
+                0,
+                "CDSCode",
+                "TEXT",
+                1,
+                null,
+                1
+            ],
+            [
+                1,
+                "Academic Year",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                2,
+                "County Code",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                3,
+                "District Code",
+                "INTEGER",
+                0,
+                null,
+                0
+            ],
+            [
+                4,
+                "School Code",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                5,
+                "County Name",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                6,
+                "District Name",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                7,
+                "School Name",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                8,
+                "District Type",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                9,
+                "School Type",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                10,
+                "Educational Option Type",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                11,
+                "NSLP Provision Status",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                12,
+                "Charter School (Y/N)",
+                "INTEGER",
+                0,
+                null,
+                0
+            ],
+            [
+                13,
+                "Charter School Number",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                14,
+                "Charter Funding Type",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                15,
+                "IRC",
+                "INTEGER",
+                0,
+                null,
+                0
+            ],
+            [
+                16,
+                "Low Grade",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                17,
+                "High Grade",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                18,
+                "Enrollment (K-12)",
+                "REAL",
+                0,
+                null,
+                0
+            ],
+            [
+                19,
+                "Free Meal Count (K-12)",
+                "REAL",
+                0,
+                null,
+                0
+            ],
+            [
+                20,
+                "Percent (%) Eligible Free (K-12)",
+                "REAL",
+                0,
+                null,
+                0
+            ],
+            [
+                21,
+                "FRPM Count (K-12)",
+                "REAL",
+                0,
+                null,
+                0
+            ],
+            [
+                22,
+                "Percent (%) Eligible FRPM (K-12)",
+                "REAL",
+                0,
+                null,
+                0
+            ],
+            [
+                23,
+                "Enrollment (Ages 5-17)",
+                "REAL",
+                0,
+                null,
+                0
+            ],
+            [
+                24,
+                "Free Meal Count (Ages 5-17)",
+                "REAL",
+                0,
+                null,
+                0
+            ],
+            [
+                25,
+                "Percent (%) Eligible Free (Ages 5-17)",
+                "REAL",
+                0,
+                null,
+                0
+            ],
+            [
+                26,
+                "FRPM Count (Ages 5-17)",
+                "REAL",
+                0,
+                null,
+                0
+            ],
+            [
+                27,
+                "Percent (%) Eligible FRPM (Ages 5-17)",
+                "REAL",
+                0,
+                null,
+                0
+            ],
+            [
+                28,
+                "2013-14 CALPADS Fall 1 Certification Status",
+                "INTEGER",
+                0,
+                null,
+                0
+            ]
+        ],
+        "foreign_keys": [
+            "frpm.CDSCode → schools.CDSCode"
+        ],
+        "sample_values": {
+            "CDSCode": {
+                "value_description": "Unique identifier combining county (2-digit), district (5-digit), and school (7-digit) codes. Foreign key to schools.CDSCode"
+            },
+            "Academic Year": {
+                "sample_values": [
+                    "2014-2015"
+                ],
+                "value_description": "The academic year of the data record, e.g., 2014-2015"
+            },
+            "County Code": {
+                "sample_values": [
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
+                ],
+                "value_description": "2-digit numeric code identifying the California county"
+            },
+            "District Code": {
+                "sample_values": {
+                    "min": 10017,
+                    "max": 76901,
+                    "avg": 65651.53024233927
+                },
+                "value_description": "5-digit numeric code identifying the school district"
+            },
+            "County Name": {
+                "sample_values": [
+                    "Alameda",
+                    "Alpine",
+                    "Amador",
+                    "Butte",
+                    "Calaveras",
+                    "Colusa",
+                    "Contra Costa",
+                    "Del Norte",
+                    "El Dorado",
+                    "Fresno",
+                    "Glenn",
+                    "Humboldt",
+                    "Imperial",
+                    "Inyo",
+                    "Kern"
+                ],
+                "value_description": "Name of the California county. Same as County in schools table and cname in satscores table"
+            },
+            "District Name": {
+                "sample_values": [
+                    "Alameda County Office of Education",
+                    "California School for the Blind (State Special Schl)",
+                    "California School for the Deaf-Fremont (State Special Schl)",
+                    "Alameda Unified",
+                    "Albany City Unified",
+                    "Berkeley Unified",
+                    "Castro Valley Unified",
+                    "Emery Unified",
+                    "Fremont Unified",
+                    "Hayward Unified",
+                    "Livermore Valley Joint Unified",
+                    "Mountain House Elementary",
+                    "Newark Unified",
+                    "New Haven Unified",
+                    "Oakland Unified"
+                ],
+                "value_description": "Name of the school district. Same as District in schools table and dname in satscores table"
+            },
+            "School Name": {
+                "sample_values": [
+                    "FAME Public Charter",
+                    "Envision Academy for Arts & Technology",
+                    "Aspire California College Preparatory Academy",
+                    "Community School for Creative Education",
+                    "Yu Ming Charter",
+                    "Urban Montessori Charter",
+                    "Alameda County Juvenile Hall/Court",
+                    "Alameda County Community",
+                    "Cox Academy",
+                    "Lazear Charter Academy",
+                    "California School for the Blind",
+                    "California School for the Deaf-Fremont",
+                    "Alameda Science and Technology Institute",
+                    "Ruby Bridges Elementary",
+                    "Nea Community Learning Center"
+                ],
+                "value_description": "Name of the school. Same as School in schools table and sname in satscores table"
+            },
+            "District Type": {
+                "sample_values": [
+                    "County Office of Education (COE)",
+                    "State Special Schools",
+                    "Unified School District",
+                    "Elementary School District",
+                    "High School District",
+                    "State Board of Education",
+                    "Non-School Locations",
+                    "Statewide Benefit Charter"
+                ],
+                "value_description": "Category of the school district (e.g., Unified School District, High School District, County Office of Education)"
+            },
+            "School Type": {
+                "sample_values": [
+                    "K-12 Schools (Public)",
+                    "High Schools (Public)",
+                    "Elementary Schools (Public)",
+                    "Juvenile Court Schools",
+                    "County Community",
+                    "State Special Schools",
+                    "Alternative Schools of Choice",
+                    "Intermediate/Middle Schools (Public)",
+                    "Continuation High Schools",
+                    "Special Education Schools (Public)",
+                    "Elemen Schools In 1 School Dist. (Public)",
+                    "District Community Day Schools",
+                    "Preschool",
+                    "Junior High Schools (Public)",
+                    "Opportunity Schools"
+                ],
+                "value_description": "Category of the school type (e.g., K-12 Schools, High Schools, Elementary Schools, Charter)"
+            },
+            "Educational Option Type": {
+                "sample_values": [
+                    "Traditional",
+                    "Juvenile Court School",
+                    "County Community School",
+                    "State Special School",
+                    "Alternative School of Choice",
+                    "Continuation School",
+                    "Special Education School",
+                    "Community Day School",
+                    "Home and Hospital",
+                    "Opportunity School",
+                    null,
+                    "Youth Authority School",
+                    "District Special Education Consortia School"
+                ],
+                "value_description": "Type of educational program offered (e.g., Traditional, Continuation School, Juvenile Court School, Alternative School of Choice)"
+            },
+            "NSLP Provision Status": {
+                "sample_values": [
+                    null,
+                    "Breakfast Provision 2",
+                    "Provision 2",
+                    "CEP",
+                    "Lunch Provision 2",
+                    "Provision 1",
+                    "Multiple Provision Types",
+                    "Provision 3"
+                ],
+                "value_description": "National School Lunch Program provision type (e.g., Provision 1, Provision 2, Provision 3, CEP - Community Eligibility Provision). Null means no provision"
+            },
+            "Charter School (Y/N)": {
+                "sample_values": {
+                    "min": 0,
+                    "max": 1,
+                    "avg": 0.11739261643697817
+                },
+                "value_description": "0: N;\n1: Y"
+            },
+            "Charter School Number": {
+                "sample_values": [
+                    "0728",
+                    "0811",
+                    "1049",
+                    "1284",
+                    "1296",
+                    "1383",
+                    null,
+                    "0740",
+                    "1464",
+                    "1066",
+                    "1181",
+                    "0352",
+                    "0398",
+                    "1254",
+                    "1255"
+                ],
+                "value_description": "4-digit number assigned to a charter school."
+            },
+            "Charter Funding Type": {
+                "sample_values": [
+                    "Directly funded",
+                    null,
+                    "Locally funded",
+                    "Not in CS funding model"
+                ],
+                "value_description": "Charter school funding type. Values: Not in CS (California School) funding model / Locally funded / Directly funded. Same as FundingType in schools table"
+            },
+            "IRC": {
+                "sample_values": {
+                    "min": 0,
+                    "max": 1,
+                    "avg": 0.07333266270998894
+                },
+                "value_description": "Not useful"
+            },
+            "Low Grade": {
+                "sample_values": [
+                    "K",
+                    "9",
+                    "1",
+                    "P",
+                    "6",
+                    "10",
+                    "7",
+                    "3",
+                    "5",
+                    "Adult",
+                    "4",
+                    "2",
+                    "8",
+                    "11",
+                    "12"
+                ],
+                "value_description": "Lowest grade offered or served by the school. Values: P (Preschool), K (Kindergarten), 1-12, Adult"
+            },
+            "High Grade": {
+                "sample_values": [
+                    "12",
+                    "8",
+                    "5",
+                    "Adult",
+                    "6",
+                    "3",
+                    "P",
+                    "7",
+                    "2",
+                    "1",
+                    "4",
+                    "K",
+                    "9",
+                    "10",
+                    "11"
+                ],
+                "value_description": "Highest grade offered or served by the school. Values: K (Kindergarten), 1-12, Adult"
+            },
+            "Enrollment (K-12)": {
+                "sample_values": {
+                    "min": 1.0,
+                    "max": 5333.0,
+                    "avg": 620.8260564790706
+                },
+                "value_description": "commonsense evidence:\n\nK-12: 1st grade - 12nd grade "
+            },
+            "Free Meal Count (K-12)": {
+                "sample_values": {
+                    "min": 1.0,
+                    "max": 3927.0,
+                    "avg": 312.003524672709
+                },
+                "value_description": "commonsense evidence:\n\neligible free rate = Free Meal Count / Enrollment"
+            },
+            "Percent (%) Eligible Free (K-12)": {
+                "sample_values": {
+                    "min": 0.00176056338028169,
+                    "max": 1.0,
+                    "avg": 0.5296390500259784
+                },
+                "value_description": "Percentage of K-12 students eligible for free meals. commonsense evidence: eligible free rate = Free Meal Count / Enrollment"
+            },
+            "FRPM Count (K-12)": {
+                "sample_values": {
+                    "min": 1.0,
+                    "max": 4419.0,
+                    "avg": 365.4796698872786
+                },
+                "value_description": "commonsense evidence:\n\neligible FRPM rate = FRPM / Enrollment"
+            },
+            "Percent (%) Eligible FRPM (K-12)": {
+                "sample_values": {
+                    "min": 0.00220507166482911,
+                    "max": 1.0,
+                    "avg": 0.6120854984478289
+                },
+                "value_description": "Percentage of K-12 students eligible for Free or Reduced Price Meals. commonsense evidence: eligible FRPM rate = FRPM Count / Enrollment"
+            },
+            "Enrollment (Ages 5-17)": {
+                "sample_values": {
+                    "min": 1.0,
+                    "max": 5271.0,
+                    "avg": 605.3251103088649
+                },
+                "value_description": "Total enrollment of students aged 5 to 17"
+            },
+            "Free Meal Count (Ages 5-17)": {
+                "sample_values": {
+                    "min": 1.0,
+                    "max": 3864.0,
+                    "avg": 304.0320952765442
+                },
+                "value_description": "commonsense evidence:\n\neligible free rate = Free Meal Count / Enrollment"
+            },
+            "Percent (%) Eligible Free (Ages 5-17)": {
+                "sample_values": {
+                    "min": 0.00179856115107914,
+                    "max": 1.0,
+                    "avg": 0.5317077962838158
+                },
+                "value_description": "Percentage of students aged 5-17 eligible for free meals. commonsense evidence: eligible free rate = Free Meal Count / Enrollment"
+            },
+            "FRPM Count (Ages 5-17)": {
+                "sample_values": {
+                    "min": 1.0,
+                    "max": 4347.0,
+                    "avg": 356.51432317934234
+                },
+                "value_description": "Number of students aged 5-17 eligible for Free or Reduced Price Meals. commonsense evidence: eligible FRPM rate = FRPM Count / Enrollment"
+            },
+            "Percent (%) Eligible FRPM (Ages 5-17)": {
+                "sample_values": {
+                    "min": 0.00220507166482911,
+                    "max": 1.0,
+                    "avg": 0.6146177416194049
+                },
+                "value_description": "Percentage of students aged 5-17 eligible for FRPM. commonsense evidence: eligible FRPM rate = FRPM Count / Enrollment"
+            },
+            "2013-14 CALPADS Fall 1 Certification Status": {
+                "sample_values": {
+                    "min": 1,
+                    "max": 1,
+                    "avg": 1.0
+                },
+                "value_description": "Certification status of the school record in CALPADS (California Longitudinal Pupil Achievement Data System) Fall 1 data collection for 2013-14"
+            }
+        }
+    },
+    "satscores": {
+        "row_count": 2269,
+        "columns": [
+            [
+                0,
+                "cds",
+                "TEXT",
+                1,
+                null,
+                1
+            ],
+            [
+                1,
+                "rtype",
+                "TEXT",
+                1,
+                null,
+                0
+            ],
+            [
+                2,
+                "sname",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                3,
+                "dname",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                4,
+                "cname",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                5,
+                "enroll12",
+                "INTEGER",
+                1,
+                null,
+                0
+            ],
+            [
+                6,
+                "NumTstTakr",
+                "INTEGER",
+                1,
+                null,
+                0
+            ],
+            [
+                7,
+                "AvgScrRead",
+                "INTEGER",
+                0,
+                null,
+                0
+            ],
+            [
+                8,
+                "AvgScrMath",
+                "INTEGER",
+                0,
+                null,
+                0
+            ],
+            [
+                9,
+                "AvgScrWrite",
+                "INTEGER",
+                0,
+                null,
+                0
+            ],
+            [
+                10,
+                "NumGE1500",
+                "INTEGER",
+                0,
+                null,
+                0
+            ]
+        ],
+        "foreign_keys": [
+            "satscores.cds → schools.CDSCode"
+        ],
+        "sample_values": {
+            "cds": {
+                "value_description": "Unique California Department of Education school identifier. Same as CDSCode in frpm and schools tables. Foreign key to schools.CDSCode"
+            },
+            "rtype": {
+                "sample_values": [
+                    "D",
+                    "S"
+                ],
+                "value_description": "unuseful"
+            },
+            "sname": {
+                "sample_values": [
+                    null,
+                    "FAME Public Charter",
+                    "Envision Academy for Arts & Technology",
+                    "Aspire California College Preparatory Academy",
+                    "Alameda Science and Technology Institute",
+                    "Nea Community Learning Center",
+                    "Alameda High",
+                    "Alameda Community Learning Center",
+                    "Alternatives in Action",
+                    "Encinal High",
+                    "Island High (Continuation)",
+                    "Albany High",
+                    "REALM Charter High",
+                    "Berkeley High",
+                    "Berkeley Technology Academy"
+                ],
+                "value_description": "School name. Same as School Name in frpm table and School in schools table"
+            },
+            "dname": {
+                "sample_values": [
+                    "Alameda County Office of Education",
+                    "Alameda Unified",
+                    "Albany City Unified",
+                    "Berkeley Unified",
+                    "Castro Valley Unified",
+                    "Emery Unified",
+                    "Fremont Unified",
+                    "Hayward Unified",
+                    "Livermore Valley Joint Unified",
+                    "Newark Unified",
+                    "New Haven Unified",
+                    "Oakland Unified",
+                    "Piedmont City Unified",
+                    "San Leandro Unified",
+                    "San Lorenzo Unified"
+                ],
+                "value_description": "District name. Same as District Name in frpm table and District in schools table"
+            },
+            "cname": {
+                "sample_values": [
+                    "Alameda",
+                    "Amador",
+                    "Butte",
+                    "Calaveras",
+                    "Colusa",
+                    "Contra Costa",
+                    "Del Norte",
+                    "El Dorado",
+                    "Fresno",
+                    "Glenn",
+                    "Humboldt",
+                    "Imperial",
+                    "Inyo",
+                    "Kern",
+                    "Kings"
+                ],
+                "value_description": "County name. Same as County Name in frpm table and County in schools table"
+            },
+            "enroll12": {
+                "sample_values": {
+                    "min": 0,
+                    "max": 43324,
+                    "avg": 419.5191714411635
+                },
+                "value_description": "Total K-12 enrollment in the school. commonsense evidence: K-12: 1st grade - 12th grade"
+            },
+            "NumTstTakr": {
+                "sample_values": {
+                    "min": 0,
+                    "max": 24305,
+                    "avg": 185.0978404583517
+                },
+                "value_description": "number of test takers in each school"
+            },
+            "AvgScrRead": {
+                "sample_values": {
+                    "min": 308,
+                    "max": 653,
+                    "avg": 479.6993424985057
+                },
+                "value_description": "average scores in Reading"
+            },
+            "AvgScrMath": {
+                "sample_values": {
+                    "min": 289,
+                    "max": 699,
+                    "avg": 484.4608487746563
+                },
+                "value_description": "average scores in Math"
+            },
+            "AvgScrWrite": {
+                "sample_values": {
+                    "min": 312,
+                    "max": 671,
+                    "avg": 472.52898983861326
+                },
+                "value_description": "average scores in writing"
+            },
+            "NumGE1500": {
+                "sample_values": {
+                    "min": 0,
+                    "max": 5837,
+                    "avg": 111.0789001793186
+                },
+                "value_description": "Number of Test Takers Whose Total SAT Scores Are Greater or Equal to 1500\n\ncommonsense evidence:\n\nExcellence Rate = NumGE1500 / NumTstTakr"
+            }
+        }
+    },
+    "schools": {
+        "row_count": 17686,
+        "columns": [
+            [
+                0,
+                "CDSCode",
+                "TEXT",
+                1,
+                null,
+                1
+            ],
+            [
+                1,
+                "NCESDist",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                2,
+                "NCESSchool",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                3,
+                "StatusType",
+                "TEXT",
+                1,
+                null,
+                0
+            ],
+            [
+                4,
+                "County",
+                "TEXT",
+                1,
+                null,
+                0
+            ],
+            [
+                5,
+                "District",
+                "TEXT",
+                1,
+                null,
+                0
+            ],
+            [
+                6,
+                "School",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                7,
+                "Street",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                8,
+                "StreetAbr",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                9,
+                "City",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                10,
+                "Zip",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                11,
+                "State",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                12,
+                "MailStreet",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                13,
+                "MailStrAbr",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                14,
+                "MailCity",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                15,
+                "MailZip",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                16,
+                "MailState",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                17,
+                "Phone",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                18,
+                "Ext",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                19,
+                "Website",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                20,
+                "OpenDate",
+                "DATE",
+                0,
+                null,
+                0
+            ],
+            [
+                21,
+                "ClosedDate",
+                "DATE",
+                0,
+                null,
+                0
+            ],
+            [
+                22,
+                "Charter",
+                "INTEGER",
+                0,
+                null,
+                0
+            ],
+            [
+                23,
+                "CharterNum",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                24,
+                "FundingType",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                25,
+                "DOC",
+                "TEXT",
+                1,
+                null,
+                0
+            ],
+            [
+                26,
+                "DOCType",
+                "TEXT",
+                1,
+                null,
+                0
+            ],
+            [
+                27,
+                "SOC",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                28,
+                "SOCType",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                29,
+                "EdOpsCode",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                30,
+                "EdOpsName",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                31,
+                "EILCode",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                32,
+                "EILName",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                33,
+                "GSoffered",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                34,
+                "GSserved",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                35,
+                "Virtual",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                36,
+                "Magnet",
+                "INTEGER",
+                0,
+                null,
+                0
+            ],
+            [
+                37,
+                "Latitude",
+                "REAL",
+                0,
+                null,
+                0
+            ],
+            [
+                38,
+                "Longitude",
+                "REAL",
+                0,
+                null,
+                0
+            ],
+            [
+                39,
+                "AdmFName1",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                40,
+                "AdmLName1",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                41,
+                "AdmEmail1",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                42,
+                "AdmFName2",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                43,
+                "AdmLName2",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                44,
+                "AdmEmail2",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                45,
+                "AdmFName3",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                46,
+                "AdmLName3",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                47,
+                "AdmEmail3",
+                "TEXT",
+                0,
+                null,
+                0
+            ],
+            [
+                48,
+                "LastUpdate",
+                "DATE",
+                1,
+                null,
+                0
+            ]
+        ],
+        "foreign_keys": [],
+        "sample_values": {
+            "CDSCode": {
+                "value_description": "Unique identifier combining county (2-digit), district (5-digit), and school (7-digit) codes. Foreign key to schools.CDSCode"
+            },
+            "NCESDist": {
+                "sample_values": [
+                    "0691051",
+                    "0600002",
+                    "0600003",
+                    null,
+                    "0601397",
+                    "0601770",
+                    "0601860",
+                    "0604740",
+                    "0607800",
+                    "0612630",
+                    "0614400",
+                    "0616740",
+                    "0622110",
+                    "0626130",
+                    "0627060"
+                ],
+                "value_description": "7-digit National Center for Educational Statistics (NCES) school district ID. First 2 digits identify the state, last 5 identify the district"
+            },
+            "NCESSchool": {
+                "sample_values": [
+                    null,
+                    "10546",
+                    "10947",
+                    "12283",
+                    "12844",
+                    "12901",
+                    "13008",
+                    "09264",
+                    "06830",
+                    "09265",
+                    "13887",
+                    "04257",
+                    "04288",
+                    "08672",
+                    "10346"
+                ],
+                "value_description": "5-digit NCES school identification number. Combined with NCESDist forms a unique 12-digit ID for each school"
+            },
+            "StatusType": {
+                "sample_values": [
+                    "Active",
+                    "Closed",
+                    "Merged",
+                    "Pending"
+                ],
+                "value_description": "Definitions of the valid status types are listed below:\n·       Active: The district is in operation and providing instructional services.\n·       Closed: The district is not in operation and no longer providing instructional services.\n·       Merged: The district has combined with another district or districts.\n·       Pending: The district has not opened for operation and instructional services yet, but plans to open within the next 9–12 months."
+            },
+            "County": {
+                "sample_values": [
+                    "Alameda",
+                    "Alpine",
+                    "Amador",
+                    "Butte",
+                    "Calaveras",
+                    "Colusa",
+                    "Contra Costa",
+                    "Del Norte",
+                    "El Dorado",
+                    "Fresno",
+                    "Glenn",
+                    "Humboldt",
+                    "Imperial",
+                    "Inyo",
+                    "Kern"
+                ],
+                "value_description": "Name of the California county. Same as County Name in frpm table and cname in satscores table"
+            },
+            "District": {
+                "sample_values": [
+                    "Alameda County Office of Education",
+                    "California School for the Blind (State Special Schl)",
+                    "California School for the Deaf-Fremont (State Special Schl)",
+                    "California Community College, Chancellors",
+                    "Mission Valley ROC/P",
+                    "Alameda Unified",
+                    "Albany City Unified",
+                    "Amador Valley Joint Union High",
+                    "Berkeley Unified",
+                    "Castro Valley Unified",
+                    "Emery Unified",
+                    "Fremont Unified",
+                    "Hayward Unified",
+                    "Livermore Valley Joint Unified",
+                    "Mountain House Elementary"
+                ],
+                "value_description": "Name of the school district. Same as District Name in frpm table and dname in satscores table"
+            },
+            "School": {
+                "sample_values": [
+                    null,
+                    "FAME Public Charter",
+                    "Envision Academy for Arts & Technology",
+                    "Aspire California College Preparatory Academy",
+                    "Community School for Creative Education",
+                    "Yu Ming Charter",
+                    "Urban Montessori Charter",
+                    "Technical, Agricultural & Nat.",
+                    "Alameda County Juvenile Hall/Court",
+                    "Alameda County Community",
+                    "Alameda County Opportunity",
+                    "Berkeley Trade & Tech. College",
+                    "Oakland Unity Middle",
+                    "Canyon Valley Adult School",
+                    "Roosevelt High (Defunct)"
+                ],
+                "value_description": "Name of the school. Same as School Name in frpm table and sname in satscores table"
+            },
+            "Street": {
+                "sample_values": [
+                    "313 West Winton Avenue",
+                    "39899 Balentine Drive, Suite 335",
+                    "1515 Webster Street",
+                    "2125 Jefferson Avenue",
+                    "2111 International Boulevard",
+                    "1086 Alcatraz Avenue",
+                    "5328 Brann Street",
+                    "597 C Street",
+                    "2500 Fairmont Avenue",
+                    null,
+                    "7200 Bancroft Avenue # 261",
+                    "9860 Sunnyside Street",
+                    "824 29th Avenue",
+                    "2500 Fairmont Drive",
+                    "2400 Fairmont Drive"
+                ],
+                "value_description": "Physical street address of the school, district, or administrative authority"
+            },
+            "StreetAbr": {
+                "sample_values": [
+                    "313 West Winton Ave.",
+                    "39899 Balentine Dr., Ste. 335",
+                    "1515 Webster St.",
+                    "2125 Jefferson Ave.",
+                    "2111 International Blvd.",
+                    "1086 Alcatraz Ave.",
+                    "5328 Brann St.",
+                    "597 C St.",
+                    "2500 Fairmont Ave.",
+                    null,
+                    "7200 Bancroft Ave. # 261",
+                    "9860 Sunnyside St.",
+                    "824 29th Ave.",
+                    "2500 Fairmont Dr.",
+                    "2400 Fairmont Dr."
+                ],
+                "value_description": "The abbreviated street address of the school, district, or administrative authority’s physical location. Note: Some records (primarily records of closed or retired schools) may not have data in this field."
+            },
+            "City": {
+                "sample_values": [
+                    "Hayward",
+                    "Newark",
+                    "Oakland",
+                    "Berkeley",
+                    "San Leandro",
+                    null,
+                    "Dublin",
+                    "Fremont",
+                    "Sacramento",
+                    "Alameda",
+                    "Albany",
+                    "Pleasanton",
+                    "Castro Valley",
+                    "Emeryville",
+                    "Livermore"
+                ],
+                "value_description": "City of the school, district, or administrative authority"
+            },
+            "Zip": {
+                "sample_values": [
+                    "94544-1136",
+                    "94560-5359",
+                    "94612-3355",
+                    "94703-1414",
+                    "94606-4903",
+                    "94608-1265",
+                    "94619-3312",
+                    "94541",
+                    "94578-1005",
+                    null,
+                    "94605-2403",
+                    "94603-2750",
+                    "94601-2205",
+                    "94578",
+                    "94560"
+                ],
+                "value_description": "ZIP code of the school, district, or administrative authority"
+            },
+            "State": {
+                "sample_values": [
+                    "CA",
+                    null
+                ],
+                "value_description": "State abbreviation. Typically CA for California schools"
+            },
+            "MailStreet": {
+                "sample_values": [
+                    "313 West Winton Avenue",
+                    "39899 Balentine Drive, Suite 335",
+                    "1515 Webster Street",
+                    "1001 22nd Avenue, Suite 100",
+                    "2111 International Boulevard",
+                    "1086 Alcatraz Avenue",
+                    "5328 Brann Street",
+                    "597 C Street",
+                    "2500 Fairmont Avenue",
+                    null,
+                    "6038 Brann Street",
+                    "9860 Sunnyside Street",
+                    "824 29th Avenue",
+                    "2500 Fairmont Drive",
+                    "2400 Fairmont Drive"
+                ],
+                "value_description": "The unabbreviated mailing address of the school, district, or administrative authority. Note: 1) Some entities (primarily closed or retired schools) may not have data in this field; 2) Many active entities have not provided a mailing street address. For your convenience we have filled the unpopulated MailStreet cells with Street data."
+            },
+            "MailStrAbr": {
+                "sample_values": [
+                    "313 West Winton Ave.",
+                    "39899 Balentine Dr., Ste. 335",
+                    "1515 Webster St.",
+                    "1001 22nd Ave., Ste. 100",
+                    "2111 International Blvd.",
+                    "1086 Alcatraz Ave.",
+                    "5328 Brann St.",
+                    "597 C St.",
+                    "2500 Fairmont Ave.",
+                    null,
+                    "6038 Brann St.",
+                    "9860 Sunnyside St.",
+                    "824 29th Ave.",
+                    "2500 Fairmont Dr.",
+                    "2400 Fairmont Dr."
+                ],
+                "value_description": "the abbreviated mailing street address of the school, district, or administrative authority.Note: Many active entities have not provided a mailing street address. For your convenience we have filled the unpopulated MailStrAbr cells with StreetAbr data."
+            },
+            "MailCity": {
+                "sample_values": [
+                    "Hayward",
+                    "Newark",
+                    "Oakland",
+                    "San Leandro",
+                    null,
+                    "Dublin",
+                    "Fremont",
+                    "Berkeley",
+                    "Sacramento",
+                    "Alameda",
+                    "Albany",
+                    "Pleasanton",
+                    "Castro Valley",
+                    "Emeryville",
+                    "Sunol"
+                ],
+                "value_description": "The city associated with the mailing address of the school, district, or administrative authority. Note: Many entities have not provided a mailing address city. For your convenience we have filled the unpopulated MailCity cells with City data."
+            },
+            "MailZip": {
+                "sample_values": [
+                    "94544-1136",
+                    "94560-5359",
+                    "94612",
+                    "94606",
+                    "94606-4903",
+                    "94608-1265",
+                    "94619-3312",
+                    "94541",
+                    "94578-1005",
+                    null,
+                    "94605-1544",
+                    "94603-2750",
+                    "94601-2205",
+                    "94578",
+                    "94560"
+                ],
+                "value_description": "The zip code associated with the mailing address of the school, district, or administrative authority. Note: Many entities have not provided a mailing address zip code. For your convenience we have filled the unpopulated MailZip cells with Zip data."
+            },
+            "MailState": {
+                "sample_values": [
+                    "CA",
+                    null
+                ],
+                "value_description": "The state within the mailing address. For your convenience we have filled the unpopulated MailState cells with State data."
+            },
+            "Phone": {
+                "sample_values": [
+                    "(510) 887-0152",
+                    null,
+                    "(510) 596-8901",
+                    "(510) 686-4131",
+                    "(510) 452-2063",
+                    "(510) 842-1181",
+                    "(510) 667-7435",
+                    "(510) 670-4590",
+                    "(510) 969-5302",
+                    "(510) 904-6300",
+                    "(510) 689-2018",
+                    "(510) 723-3857",
+                    "(510) 794-3800",
+                    "(510) 794-3666",
+                    "(510) 337-7000"
+                ],
+                "value_description": "Phone number of the school, district, or administrative authority"
+            },
+            "Ext": {
+                "sample_values": [
+                    null,
+                    "130",
+                    "1240",
+                    "1200",
+                    "1311",
+                    "39117",
+                    "2050",
+                    "470",
+                    "8002",
+                    "6605",
+                    "6805",
+                    "6305",
+                    "7921",
+                    "6705",
+                    "7005"
+                ],
+                "value_description": "The phone number extension of the school, district, or administrative authority."
+            },
+            "Website": {
+                "sample_values": [
+                    "www.acoe.org",
+                    null,
+                    "www.envisionacademy.org/",
+                    "www.aspirepublicschools.org",
+                    "www.communityschoolforcreativeeducation.org",
+                    "www.yumingschool.org",
+                    "www.urbanmontessori.org",
+                    "www.unitymiddle.org",
+                    "www.efcps.org",
+                    "www.csb-cde.ca.gov",
+                    "www.csdeagles.com",
+                    "www.alameda.k12.ca.us",
+                    "http://neaclc.org",
+                    "http://aoaschools.org/",
+                    "www.alameda.k12.ca.us/"
+                ],
+                "value_description": "The website address of the school, district, or administrative authority."
+            },
+            "OpenDate": {
+                "sample_values": [
+                    null,
+                    "2005-08-29",
+                    "2006-08-28",
+                    "2008-08-21",
+                    "2011-08-22",
+                    "2011-08-09",
+                    "2012-08-27",
+                    "1980-07-01",
+                    "2015-08-23",
+                    "1997-09-01",
+                    "2003-08-28",
+                    "2004-08-19",
+                    "2009-08-31",
+                    "2010-08-30",
+                    "2012-07-01"
+                ],
+                "value_description": "The date the school opened"
+            },
+            "ClosedDate": {
+                "sample_values": [
+                    null,
+                    "2015-07-31",
+                    "2015-06-30",
+                    "1989-06-30",
+                    "2013-06-30",
+                    "1987-06-22",
+                    "1984-07-24",
+                    "2000-06-30",
+                    "2004-07-01",
+                    "2003-05-08",
+                    "1994-06-30",
+                    "2010-07-01",
+                    "2006-06-16",
+                    "2006-07-01",
+                    "2012-06-30"
+                ],
+                "value_description": "The date the school closed. Null if the school is still active"
+            },
+            "Charter": {
+                "sample_values": {
+                    "min": 0,
+                    "max": 1,
+                    "avg": 0.10596310596310596
+                },
+                "value_description": "The field is coded as follows:\n\n·       1 = The school is a charter\n\n·       0 = The school is not a charter"
+            },
+            "CharterNum": {
+                "sample_values": [
+                    null,
+                    "0728",
+                    "0811",
+                    "1049",
+                    "1284",
+                    "1296",
+                    "1383",
+                    "1707",
+                    "0740",
+                    "1464",
+                    "0107",
+                    "1066",
+                    "1181",
+                    "0352",
+                    "0398"
+                ],
+                "value_description": "4-digit number assigned to a charter school."
+            },
+            "FundingType": {
+                "sample_values": [
+                    null,
+                    "Directly funded",
+                    "Locally funded",
+                    "Not in CS funding model"
+                ],
+                "value_description": "Values are as follows:\n\n·       Not in CS (California School) funding model\n\n·       Locally funded\n\n·       Directly funded"
+            },
+            "DOC": {
+                "sample_values": [
+                    "00",
+                    "31",
+                    "34",
+                    "42",
+                    "54",
+                    "56",
+                    "52",
+                    "58",
+                    "98",
+                    "02",
+                    "99",
+                    "03"
+                ],
+                "value_description": "The District Ownership Code (DOC) is the numeric code used to identify the category of the Administrative Authority.\n•       00 - County Office of Education\n•       02 – State Board of Education\n•       03 – Statewide Benefit Charter\n•       31 – State Special Schools\n•       34 – Non-school Location*\n•       52 – Elementary School District\n•       54 – Unified School District\n•       56 – High School District\n•       98 – Regional Occupational Center/Program (ROC/P)\ncommonsense evidence:\n*Only the California Education Authority has been included in the non-school location category."
+            },
+            "DOCType": {
+                "sample_values": [
+                    "County Office of Education (COE)",
+                    "State Special Schools",
+                    "Non-School Locations",
+                    "Joint Powers Authority (JPA)",
+                    "Unified School District",
+                    "High School District",
+                    "Elementary School District",
+                    "Community College District",
+                    "Regional Occupation Center/Program (ROC/P)",
+                    "State Board of Education",
+                    "Administration Only",
+                    "Statewide Benefit Charter"
+                ],
+                "value_description": "(See text values in DOC field description above)"
+            },
+            "SOC": {
+                "sample_values": [
+                    null,
+                    "65",
+                    "66",
+                    "60",
+                    "10",
+                    "14",
+                    "13",
+                    "62",
+                    "70",
+                    "09",
+                    "31",
+                    "08",
+                    "63",
+                    "68",
+                    "64"
+                ],
+                "value_description": "•      08 - Preschool      \n•       09 – Special Education Schools (Public)\n•      11 – Youth Authority Facilities (CEA)\n•       13 – Opportunity Schools\n•       14 – Juvenile Court Schools\n•       15 – Other County or District Programs\n•       31 – State Special Schools\n•       60 – Elementary School (Public)\n•       61 – Elementary School in 1 School District (Public)\n•       62 – Intermediate/Middle Schools (Public)\n•       63 – Alternative Schools of Choice\n•       64 – Junior High Schools (Public)\n•       65 – K-12 Schools (Public)\n•       66 – High Schools (Public)\n•       67 – High Schools in 1 School District (Public)\n•       68 – Continuation High Schools\n•       69 – District Community Day Schools\n•       70 – Adult Education Centers\n•       98 – Regional Occupational Center/Program (ROC/P)"
+            },
+            "SOCType": {
+                "sample_values": [
+                    null,
+                    "K-12 Schools (Public)",
+                    "High Schools (Public)",
+                    "Elementary Schools (Public)",
+                    "County Community",
+                    "Juvenile Court Schools",
+                    "Opportunity Schools",
+                    "Intermediate/Middle Schools (Public)",
+                    "Adult Education Centers",
+                    "Special Education Schools (Public)",
+                    "State Special Schools",
+                    "Preschool",
+                    "Alternative Schools of Choice",
+                    "Continuation High Schools",
+                    "Junior High Schools (Public)"
+                ],
+                "value_description": "The School Ownership Code Type is the text description of the type of school."
+            },
+            "EdOpsCode": {
+                "sample_values": [
+                    null,
+                    "TRAD",
+                    "JUV",
+                    "COMM",
+                    "OPP",
+                    "SPEC",
+                    "SSS",
+                    "ALTSOC",
+                    "CON",
+                    "COMMDAY",
+                    "HOMHOS",
+                    "YTH",
+                    "ROP",
+                    "SPECON"
+                ],
+                "value_description": "\n•      ALTSOC – Alternative School of Choice\n•      COMM – County Community School\n•       COMMDAY – Community Day School\n•       CON – Continuation School\n•       JUV – Juvenile Court School\n•       OPP – Opportunity School\n•       YTH – Youth Authority School\n•       SSS – State Special School\n•       SPEC – Special Education School\n•       TRAD – Traditional\n•       ROP – Regional Occupational Program\n•       HOMHOS – Home and Hospital\n•       SPECON – District Consortia Special Education School"
+            },
+            "EdOpsName": {
+                "sample_values": [
+                    null,
+                    "Traditional",
+                    "Juvenile Court School",
+                    "County Community School",
+                    "Opportunity School",
+                    "Special Education School",
+                    "State Special School",
+                    "Alternative School of Choice",
+                    "Continuation School",
+                    "Community Day School",
+                    "Home and Hospital",
+                    "Youth Authority School",
+                    "ROP",
+                    "District Special Education Consortia School"
+                ],
+                "value_description": "The Educational Option Name is the long text description of the type of education being offered."
+            },
+            "EILCode": {
+                "sample_values": [
+                    null,
+                    "ELEMHIGH",
+                    "HS",
+                    "ELEM",
+                    "UG",
+                    "INTMIDJR",
+                    "PS",
+                    "A"
+                ],
+                "value_description": "•       A – Adult\n•       ELEM – Elementary\n•       ELEMHIGH – Elementary-High Combination\n•       HS – High School\n•       INTMIDJR – Intermediate/Middle/Junior High\n•       PS – Preschool\n•       UG – Ungraded"
+            },
+            "EILName": {
+                "sample_values": [
+                    null,
+                    "Elementary-High Combination",
+                    "High School",
+                    "Elementary",
+                    "Ungraded",
+                    "Intermediate/Middle/Junior High",
+                    "Preschool",
+                    "Adult"
+                ],
+                "value_description": "The Educational Instruction Level Name is the long text description of the institution’s type relative to the grade range served."
+            },
+            "GSoffered": {
+                "sample_values": [
+                    null,
+                    "K-12",
+                    "9-12",
+                    "K-8",
+                    "7-12",
+                    "6-8",
+                    "P-5",
+                    "5-12",
+                    "P",
+                    "K-4",
+                    "1-Adult",
+                    "P-12",
+                    "8-12",
+                    "K-5",
+                    "Adult"
+                ],
+                "value_description": "For example XYZ School might display the following data:\n\nGSoffered = P–Adult\n\nGSserved = K–12"
+            },
+            "GSserved": {
+                "sample_values": [
+                    null,
+                    "K-12",
+                    "9-12",
+                    "K-7",
+                    "K-5",
+                    "8-12",
+                    "7-12",
+                    "6-7",
+                    "K-8",
+                    "6-8",
+                    "6-12",
+                    "K-1",
+                    "10-12",
+                    "K",
+                    "11-12"
+                ],
+                "value_description": "commonsense evidence:\n\n1.     Only K–12 enrollment is reported through CALPADS\n\n2.     Note: Special programs at independent study, alternative education, and special education schools will often exceed the typical grade span for schools of that type"
+            },
+            "Virtual": {
+                "sample_values": [
+                    null,
+                    "P",
+                    "N",
+                    "F"
+                ],
+                "value_description": "The field is coded as follows:\n\n·       F = Exclusively Virtual – The school has no physical building where students meet with each other or with teachers, all instruction is virtual.\n\n·       V = Primarily Virtual – The school focuses on a systematic program of virtual instruction but includes some physical meetings among students or with teachers.\n\n·       C = Primarily Classroom – The school offers virtual courses but virtual instruction is not the primary means of instruction.\n\n·       N = Not Virtual – The school does not offer any virtual instruction.\n\n·       P = Partial Virtual – The school offers some, but not all, instruction through virtual instruction. Note: This value was retired and replaced with the Primarily Virtual and Primarily Classroom values beginning with the 2016–17 school year."
+            },
+            "Magnet": {
+                "sample_values": {
+                    "min": 0,
+                    "max": 1,
+                    "avg": 0.04891611687087653
+                },
+                "value_description": "The field is coded as follows:\n\n·       1 = Magnet - The school is a magnet school and/or offers a magnet program.\n\n·       0 = Not Magnet - The school is not a magnet school and/or does not offer a magnet program.\n\ncommonsense evidence:\n\nNote: Preschools and adult education centers do not contain a magnet school indicator."
+            },
+            "Latitude": {
+                "sample_values": {
+                    "min": 32.547737,
+                    "max": 44.219305,
+                    "avg": 36.00771538910052
+                },
+                "value_description": "The angular distance (expressed in degrees) between the location of the school, district, or administrative authority and the equator measured north to south."
+            },
+            "Longitude": {
+                "sample_values": {
+                    "min": -124.28481,
+                    "max": -83.781133,
+                    "avg": -119.69425543838918
+                },
+                "value_description": "The angular distance (expressed in degrees) between the location of the school, district, or administrative authority and the prime meridian (Greenwich, England) measured from west to east."
+            },
+            "AdmFName1": {
+                "sample_values": [
+                    "L Karen",
+                    null,
+                    "Laura",
+                    "Clifford",
+                    "Sue",
+                    "David",
+                    "Michael",
+                    "Carolyn",
+                    "Damon",
+                    "Kevin",
+                    "Sarah",
+                    "Robert",
+                    "Sharon",
+                    "Scott",
+                    "Sean"
+                ],
+                "value_description": "The superintendent’s or principal’s first name.\n\ncommonsense evidence:\n\nOnly active and pending districts and schools will display administrator information, if applicable."
+            },
+            "AdmLName1": {
+                "sample_values": [
+                    "Monroe",
+                    null,
+                    "Robell",
+                    "Thompson",
+                    "Park",
+                    "Castillo",
+                    "Hermosillo",
+                    "Hobbs",
+                    "Grant",
+                    "King",
+                    "Morrill",
+                    "Stout",
+                    "Sacks",
+                    "Kerby",
+                    "Peterson"
+                ],
+                "value_description": "The superintendent’s or principal’s last name.\n\ncommonsense evidence:\nOnly active and pending districts and schools will display administrator information, if applicable."
+            },
+            "AdmEmail1": {
+                "sample_values": [
+                    "lkmonroe@acoe.org",
+                    null,
+                    "laura@envisionacademy.org",
+                    "cliffordt@communityschoolforcreativeeducation.org",
+                    "spark@yumingschool.org",
+                    "davidc@urbanmontessori.org",
+                    "mhermosillo@acoe.org",
+                    "chobbs@acoe.org",
+                    "dgrant@unitymiddle.org",
+                    "kking@efcps.net",
+                    "smorrill@efcps.net",
+                    "rstout@acoe.org",
+                    "ssacks@csb-cde.ca.gov",
+                    "skerby@cde.ca.gov",
+                    "lpeterson@csdf-cde.ca.gov"
+                ],
+                "value_description": "The superintendent’s or principal’s email address.\n\ncommonsense evidence:\n\nOnly active and pending districts and schools will display administrator information, if applicable."
+            },
+            "AdmFName2": {
+                "sample_values": [
+                    null,
+                    "Sau-Lim (Lance)",
+                    "Jennifer",
+                    "Annalisa",
+                    "Woo",
+                    "David",
+                    "Sam",
+                    "Brandon",
+                    "Jarod",
+                    "Sailaja",
+                    "Sophath",
+                    "Jorge",
+                    "Rosemary",
+                    "Laura",
+                    "Johnna"
+                ],
+                "value_description": "SAME as 1"
+            },
+            "AdmLName2": {
+                "sample_values": [
+                    null,
+                    "Tsang",
+                    "Koelling",
+                    "Moore",
+                    "Williams",
+                    "Hoopes",
+                    "Pasarow",
+                    "Paige",
+                    "Scott",
+                    "Saresh",
+                    "Mey",
+                    "Wahner",
+                    "McAtee",
+                    "Hayes",
+                    "Grell"
+                ],
+                "value_description": null
+            },
+            "AdmEmail2": {
+                "sample_values": [
+                    null,
+                    "stsang@unityhigh.org",
+                    "jkoelling@efcps.net",
+                    "annalisa.moore@neaclc.org",
+                    "wwilliams@aoaschools.org",
+                    "david.hoopes@alamedaclc.org",
+                    "sampasarow@berkeley.net",
+                    "brandon.paige@lighthousecharter.org",
+                    "jarod.scott@ousd.org",
+                    "sailaga.saresh@ousd.org",
+                    "smey@vincentacademy.org",
+                    "jorge.wahner@ousd.org",
+                    "rosemary.mcatee@ousd.org",
+                    "lhayes@leadps.org",
+                    "jgrell@omiacademy.org"
+                ],
+                "value_description": null
+            },
+            "AdmFName3": {
+                "sample_values": [
+                    null,
+                    "Drew",
+                    "Irma",
+                    "Vickie",
+                    "Barbara",
+                    "Kelly",
+                    "Patsy",
+                    "Dustin",
+                    "Joy",
+                    "Sabrina",
+                    "Eric",
+                    "Portia",
+                    "Michelle",
+                    "Mark",
+                    "Alex"
+                ],
+                "value_description": "not useful"
+            },
+            "AdmLName3": {
+                "sample_values": [
+                    null,
+                    "Sarratore",
+                    "Munoz",
+                    "Chang",
+                    "Mandelbaum",
+                    "Kriss",
+                    "Oxford",
+                    "Kerns",
+                    "DeBoer",
+                    "Ayala",
+                    "Bergmann",
+                    "Rivera",
+                    "Fournier",
+                    "Spotts",
+                    "Roulette"
+                ],
+                "value_description": "not useful"
+            },
+            "AdmEmail3": {
+                "sample_values": [
+                    null,
+                    "dsarratore@vincentacademy.org",
+                    "gmunoz@piedmont.k12.ca.us",
+                    "vickiechang@acoe.org",
+                    "bmandelbaum@bcoe.org",
+                    "kkriss@pusdk12.org",
+                    "poxford@puesd.org",
+                    "dustin.kerns@imagineschools.com",
+                    "jdeboer@learn4life.org",
+                    "sayala@greendot.org",
+                    "ebergmann@smusd.us",
+                    "rivera.portia@tusd.org",
+                    "fournier.michelle@tusd.org",
+                    "spotts.eric@tusd.org",
+                    "roulette.mark@tusd.org"
+                ],
+                "value_description": "not useful"
+            },
+            "LastUpdate": {
+                "sample_values": [
+                    "2015-06-23",
+                    "2015-09-01",
+                    "2015-06-18",
+                    "2015-07-01",
+                    "2016-07-18",
+                    "2016-05-10",
+                    "2015-10-09",
+                    "1999-06-24",
+                    "2016-10-06",
+                    "2014-04-28",
+                    "2016-08-17",
+                    "2016-08-23",
+                    "2015-10-13",
+                    "2000-08-16",
+                    "2016-06-23"
+                ],
+                "value_description": "when is this record updated last time"
+            }
+        }
+    }
+}
