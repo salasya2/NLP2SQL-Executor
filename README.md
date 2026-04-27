@@ -21,56 +21,99 @@ CHESS (Contextual Harnessing for Efficient SQL Synthesis) is an end-to-end Natur
 - `/data` - Active databases and schema descriptions.
 - `/index` - Generated database indices (`index.json`) for schema pruning.
 
-## Getting Started
+## How to Run
+
+You can run the CHESS SQL framework entirely locally using Python/Node, or containerize it using Docker and Kubernetes.
 
 ### Prerequisites
-- Docker and Kubernetes (e.g., minikube or Docker Desktop)
 - Groq API Key
+- Redis server (local or hosted)
 
 ### Environment Setup
-Create a `.env` file in the root directory with the following configuration:
+Create a `.env` file in the root directory:
 ```env
 GROQ_API_KEY=your_groq_api_key
 REDIS_HOST=localhost
 REDIS_PASSWORD=your_redis_password
 ```
 
-### Deployment (Kubernetes)
-1. Start your local Kubernetes cluster.
-2. Create the required secrets:
-   ```bash
-   kubectl create secret generic chess-secrets --from-env-file=.env
-   ```
-3. Apply the backend and frontend manifests:
-   ```bash
-   kubectl apply -f k8s-backend.yaml
-   kubectl apply -f k8s-frontend.yaml
-   ```
+### Option 1: Running Locally (Development)
 
-### Running Locally (Development)
-1. Install backend dependencies: 
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. Start a Redis server locally on port 17436 (as configured in `backend/sqlapp.py`).
-3. Run the backend API: 
-   ```bash
-   uvicorn backend.sqlapp:app --host 0.0.0.0 --port 5000
-   ```
-4. Navigate to `frontend` and start the React dev server: 
-   ```bash
-   cd frontend
-   npm install
-   npm run dev
-   ```
+This is the fastest way to test changes.
 
-## How it Works
+**1. Start Redis**
+Ensure you have a Redis instance running on port `17436` (or update `backend/sqlapp.py` to match your Redis config).
+```bash
+redis-server --port 17436 --requirepass "your_redis_password"
+```
 
-1. **Indexing**: The framework parses the active SQLite database and provided CSV descriptions to build an `index.json`. This index contains column details, sample values, and foreign key relationships.
-2. **Querying**: 
-   - A user asks a question via text or voice.
-   - The system checks the **Redis Semantic Cache** for highly similar past queries.
-   - On a cache miss, the **IR (Information Retrieval)** agent extracts keywords and entities.
-   - The **SS (Schema Selection)** agent prunes the database schema to only the relevant tables and columns based on the keywords.
-   - The **CG (Candidate Generation)** agent receives the heavily pruned schema and generates the final SQL query.
-   - The SQL is executed against the database and results are returned to the user, while the successful query is cached for future use.
+**2. Start the Backend (FastAPI)**
+```bash
+pip install -r requirements.txt
+uvicorn backend.sqlapp:app --host 0.0.0.0 --port 5000
+```
+*The API will be available at http://localhost:5000*
+
+**3. Start the Frontend (React)**
+In a new terminal:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+*The UI will be available at http://localhost:5173*
+
+### Option 2: Running via Docker
+
+You can build and run the individual Docker containers.
+
+**1. Build the Images**
+```bash
+# Build backend
+docker build -t chess-backend:latest .
+
+# Build frontend
+cd frontend
+docker build -t chess-frontend:latest .
+```
+
+**2. Run the Containers**
+```bash
+# Run backend (Make sure your REDIS_HOST in .env points to a reachable Redis IP)
+docker run -d -p 5000:5000 --env-file .env chess-backend:latest
+
+# Run frontend
+docker run -d -p 80:80 chess-frontend:latest
+```
+
+### Option 3: Deployment (Kubernetes)
+
+For production-like orchestration using Minikube or Docker Desktop.
+
+**1. Load images into your cluster** (e.g., for Minikube)
+```bash
+minikube image load chess-backend:latest
+minikube image load chess-frontend:latest
+```
+
+**2. Deploy Secrets and Services**
+```bash
+kubectl create secret generic chess-secrets --from-env-file=.env
+kubectl apply -f k8s-backend.yaml
+kubectl apply -f k8s-frontend.yaml
+```
+
+**3. Access the Application**
+```bash
+kubectl port-forward svc/frontend-service 8080:80
+# Access via http://localhost:8080
+```
+
+---
+
+## How it Works (Briefly)
+
+1. **Upload Database**: Upload a `.sqlite` database and descriptive `.csv` files via the UI to build an `index.json`.
+2. **Ask a Question**: Type a natural language query or use the voice recorder.
+3. **Pipeline Execution**: The system checks the Redis semantic cache. On a miss, it routes through the IR (Keywords), SS (Schema Pruning), and CG (SQL Generation) agents via Llama-3.3-70b.
+4. **View Results**: The generated SQL executes against the SQLite database, returning the query and data table.
