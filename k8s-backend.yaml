@@ -15,7 +15,7 @@ spec:
       containers: 
       - name: backend
         image: chess-backend:latest
-        imagePullPolicy: ifNotPresent
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
         envFrom:
