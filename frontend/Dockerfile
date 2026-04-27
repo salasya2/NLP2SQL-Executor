@@ -1,5 +1,5 @@
 # Stage 1: Build the Vite frontend
-FROM node:18-alpine as builder
+FROM node:20-alpine AS builder
 
 WORKDIR /app
 
