@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chess-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: chess-backend
+  template:
+    metadata:
+      labels:
+        app: chess-backend
+    spec:
+      containers: 
+      - name: backend
+        image: chess-backend:latest
+        imagePullPolicy: ifNotPresent
+        ports:
+        - containerPort: 5000
+        envFrom:
+        - secretRef:
+            name: chess-secrets
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  selector:
+    app: chess-backend
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
