@@ -126,7 +126,7 @@ Before you can query, you need to index your database. Navigate to the **Build I
 | File | Required | Description |
 |---|---|---|
 | `database.sqlite` or `database.db` | ✅ Yes | Your SQLite database file |
-| `<table_name>.csv` per table | ❌ Optional | Description CSVs to enrich column context |
+| `<table_name>.csv` per table | ✅ Required (Important if you want to get accurate results) | Description CSVs to enrich column context |
 
 #### What are the Description CSVs?
 Each `.csv` file maps column names to human-readable descriptions. This helps the LLM understand what a column like `FRPM_Count` actually means. Each CSV should be named after its corresponding table (e.g., `schools.csv`) and must contain these columns:
