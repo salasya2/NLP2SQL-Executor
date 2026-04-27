@@ -19,6 +19,9 @@ FROM nginx:alpine
 # Copy the built assets from the builder stage
 COPY --from=builder /app/dist /usr/share/nginx/html
 
+# Copy the custom Nginx configuration to enable API proxying
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 # Expose port 80 (the default Nginx port)
 EXPOSE 80
 
