@@ -22,8 +22,8 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 # Copy the custom Nginx configuration to enable API proxying
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Expose port 80 (the default Nginx port)
-EXPOSE 80
+# Expose port 443 (HTTPS)
+EXPOSE 443
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
